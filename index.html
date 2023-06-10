@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+
+        main {
+            width: 400px;
+            height: 300px;
+            border: 2px solid black;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+        main>section {
+            width: 1600px;
+            height: 300px;
+            border: 1px solid red;
+            display: flex;
+            animation-name: my-animation;
+            animation-duration: 5s;
+            animation-play-state: running;
+            /* animation-direction: alternate; */
+            animation-iteration-count: infinite;
+        }
+
+        main>section>div {
+            width: 400px;
+            height: 300px;
+            border: 1px solid blue;
+        }
+
+        main>section>div:nth-child(1) {
+            background-image: url(assets/carosel/slide1.png);
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(2) {
+            background-image: url(assets/carosel/slide2.png);
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(3) {
+            background-image: url(assets/carosel/slide3.png);
+            background-size: cover;
+        }
+
+        main>section>div:nth-child(4) {
+            background-image: url(assets/carosel/slide4.png);
+            background-size: cover;
+        }
+
+        @keyframes my-animation {
+
+            0% {
+                transform: translateX(-0%);
+            }
+
+            25% {
+                transform: translateX(-25%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            75% {
+                transform: translateX(-75%);
+            }
+
+            100% {
+                /* transform: translateX(100%); */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+    </main>
+
+</body>
+
+</html>
